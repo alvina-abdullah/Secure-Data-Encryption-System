@@ -18,8 +18,6 @@ cipher = Fernet(KEY)
 # Global failed attempt tracker
 if "failed_attempts" not in st.session_state:
     st.session_state.failed_attempts = 0
-
-# Function to hash passkey
 def hash_passkey(passkey):
     return hashlib.sha256(passkey.encode()).hexdigest()
 
